@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETL Data Migration</title>
+</head>
+<body>
+    <h2>ETL Data Migration Tool</h2>
+    <form method="POST">
+        <label>Source Database URL:</label><br>
+        <input type="text" name="source_db" required><br><br>
+        
+        <label>Target Database URL:</label><br>
+        <input type="text" name="target_db" required><br><br>
+        
+        <label>Table Name:</label><br>
+        <input type="text" name="table_name" required><br><br>
+
+        <button type="submit">Migrate Data</button>
+    </form>
+
+    {% if result %}
+        <p><strong>Result:</strong> {{ result }}</p>
+    {% endif %}
+</body>
